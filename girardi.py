@@ -1,15 +1,15 @@
-# Esercizio finale
+# FINAL EXERCISE
 
-# ALGORITMI USATI
+# ALGORITH USAGE
 
 # -- BLAKE2b -- 
-# Scelto perché è il più veloce in software, versione b perché è appositamente
-# stato creato per sistemi a 64 bit. 
+# Fastest in software, version b because it is specifically designed for 
+# 64 bit systems. (waiting for SHA3 optimization)
 # -- scrypt --
-# KDF necessaria per ottenere una key derivata dalla password dell`utente,
-# scelta perché è la migliore a disposizione (pyCryptodome non ha Argon2).
+# KDF necessary to derive a key from the user's password,
+# it is the best available (pyCryptodome does not have Argon2).
 # -- AES-OCB --
-# Miglior cifrario simmetrico autenticato.
+# Best symmetric cipher. Includes authentication.
 
 #
 # modules import
@@ -28,7 +28,7 @@ import os.path
 #
 
 # Function that returns a derived 16 bytes key from a string using scrypt.
-# -- init Parameters: --
+# -- parameters: --
 # password: inserted by the user at the beginning of the system
 # salt: generated random in save_and_exit() function
 
