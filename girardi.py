@@ -45,7 +45,8 @@ def process_pwd(password, salt):
 #
 
 # function that reads user file, decrypts it using OCB and
-# returns a json file containing the credentials of the user 
+# returns a json file containing the credentials of the user.
+
 # -- parameters: --
 # path: username hashed with BLAKE2b in log_in() function
 # password: inserted by the user at the beginning of the system
@@ -68,6 +69,7 @@ def load_data(path, password):
 # function that takes data, encrypts it using OCB and the key derivated
 # from the user's password, and writes all the encryption parameters
 # in the user file.
+
 # -- parameters: --
 # path: username hashed with BLAKE2b in log_in() function
 # password: inserted by the user at the beginning of the system
@@ -88,6 +90,7 @@ def save_and_exit(path, password, credentials):
 # function that searches an id (query) in the dictionary, if id exist shows the
 # credentials stored in it, otherwise add a new id and asks the
 # user new credentials.
+        
 # parameters:
 # query: id inserted by the user in log_in() function
 # dic: result of the load_data() function
@@ -118,6 +121,7 @@ def search_and_add(query, dic):
 # function, otherwise asks the user if he wants to add the new username.
 # Then asks for credentials to search, if the credentials exists calls
 # search_and_add(), otherwise asks the user if he wants to add new credentials.
+
 # -- parameters: --
 # username: username inserted by user at the beginning of the system
 # password: inserted by the user at the beginning of the system
